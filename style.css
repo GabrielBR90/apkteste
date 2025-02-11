@@ -5,24 +5,22 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 90%;
     margin: auto;
 }
 
 .linha {
     display: flex;
-    flex-wrap: wrap; /* Garante que os itens se ajustem ao tamanho da tela */
+    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px; /* Espaçamento maior entre as linhas */
-    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 15px; /* Maior espaçamento entre as linhas */
 }
 
 .label {
     font-weight: bold;
     white-space: nowrap;
-    margin-right: 5px;
-    min-width: 100px; /* Mantém os rótulos alinhados */
+    margin-right: 10px; /* Aproxima os campos dos títulos */
 }
 
 .input {
@@ -30,27 +28,37 @@ body {
     border-bottom: 1px solid black;
     outline: none;
     background: transparent;
-    flex-grow: 1;
-    min-width: 150px;
-    max-width: calc(100% - 120px);
-    margin-right: 5px;
+    flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
+    min-width: 120px;
+    max-width: 100%;
+    margin-right: 10px; /* Ajusta espaçamento entre os inputs */
 }
 
-/* Ajuste específico para manter a mesma aparência no mobile */
+.input-pequeno {
+    width: 80px;
+}
+
+.input-medio {
+    width: 150px;
+}
+
+.input-grande {
+    width: 100%;
+}
+
+/* Responsividade para telas menores */
 @media screen and (max-width: 600px) {
     .linha {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-    }
-
-    .label {
-        min-width: 100px;
+        flex-direction: column; /* Faz os elementos ficarem um abaixo do outro em telas pequenas */
+        align-items: flex-start;
     }
 
     .input {
-        width: auto;
-        max-width: 100%;
+        width: 100%; /* Faz os campos ocuparem toda a largura no mobile */
+        margin-bottom: 5px; /* Espaçamento extra para melhor organização */
+    }
+
+    .label {
+        margin-bottom: 3px; /* Ajusta o espaçamento dos rótulos no mobile */
     }
 }
