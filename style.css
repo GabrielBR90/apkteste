@@ -25,9 +25,11 @@ body {
 .input {
     flex: 2;
     min-width: 150px;
+    border: none;
     border-bottom: 1px solid black;
     padding: 2px;
     outline: none;
+    background: transparent;
 }
 
 .input-pequeno {
