@@ -11,26 +11,25 @@ body {
 
 .linha {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 1.5px; /* Espaçamento entre as linhas */
+    justify-content: flex-start;
+    margin-bottom: 5px; /* Ajuste de espaçamento entre as linhas */
 }
 
 .label {
-    flex: 0;
-    margin-right: 5px; /* Aproxima a linha do título */
     font-weight: bold;
     white-space: nowrap;
+    margin-right: 5px; /* Reduz espaço entre título e linha */
 }
 
 .input {
-    flex: 1;
     border: none;
     border-bottom: 1px solid black;
-    padding: 2px;
     outline: none;
     background: transparent;
-    margin-left: 3px; /* Aproxima a linha do título */
+    margin-right: 10px; /* Pequeno espaçamento entre inputs */
+    flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
+    width: auto;
 }
 
 .input-pequeno {
@@ -38,7 +37,7 @@ body {
 }
 
 .input-medio {
-    width: 150px;
+    width: 120px;
 }
 
 .input-grande {
