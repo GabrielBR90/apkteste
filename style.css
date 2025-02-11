@@ -5,22 +5,21 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    max-width: 600px;
     margin: auto;
 }
 
 .linha {
     display: flex;
-    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 15px; /* Maior espaçamento entre as linhas */
+    margin-bottom: 5px; /* Ajuste de espaçamento entre as linhas */
 }
 
 .label {
     font-weight: bold;
     white-space: nowrap;
-    margin-right: 10px; /* Aproxima os campos dos títulos */
+    margin-right: 5px; /* Reduz espaço entre título e linha */
 }
 
 .input {
@@ -28,10 +27,9 @@ body {
     border-bottom: 1px solid black;
     outline: none;
     background: transparent;
+    margin-right: 10px; /* Pequeno espaçamento entre inputs */
     flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
-    min-width: 120px;
-    max-width: 100%;
-    margin-right: 10px; /* Ajusta espaçamento entre os inputs */
+    width: auto;
 }
 
 .input-pequeno {
@@ -39,26 +37,9 @@ body {
 }
 
 .input-medio {
-    width: 150px;
+    width: 120px;
 }
 
 .input-grande {
     width: 100%;
-}
-
-/* Responsividade para telas menores */
-@media screen and (max-width: 600px) {
-    .linha {
-        flex-direction: column; /* Faz os elementos ficarem um abaixo do outro em telas pequenas */
-        align-items: flex-start;
-    }
-
-    .input {
-        width: 100%; /* Faz os campos ocuparem toda a largura no mobile */
-        margin-bottom: 5px; /* Espaçamento extra para melhor organização */
-    }
-
-    .label {
-        margin-bottom: 3px; /* Ajusta o espaçamento dos rótulos no mobile */
-    }
 }
