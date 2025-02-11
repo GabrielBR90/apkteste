@@ -11,25 +11,26 @@ body {
 
 .linha {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px; /* Ajuste de espaçamento entre as linhas */
+    margin-bottom: 1.5px; /* Espaçamento entre as linhas */
 }
 
 .label {
+    flex: 0;
+    margin-right: 5px; /* Aproxima a linha do título */
     font-weight: bold;
     white-space: nowrap;
-    margin-right: 5px; /* Reduz espaço entre título e linha */
 }
 
 .input {
+    flex: 1;
     border: none;
     border-bottom: 1px solid black;
+    padding: 2px;
     outline: none;
     background: transparent;
-    margin-right: 30px; /* Pequeno espaçamento entre inputs */
-    flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
-    width: auto;
+    margin-left: 3px; /* Aproxima a linha do título */
 }
 
 .input-pequeno {
@@ -37,9 +38,28 @@ body {
 }
 
 .input-medio {
-    width: 120px;
+    width: 150px;
 }
 
 .input-grande {
     width: 100%;
+}
+
+/* Responsividade melhorada */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .linha {
+        justify-content: space-evenly; /* Mantém os elementos distribuídos igualmente */
+    }
+
+    .input {
+        min-width: 100px; /* Mantém o tamanho ajustável */
+    }
+
+    .label {
+        min-width: auto; /* Faz os rótulos ocuparem apenas o espaço do texto */
+    }
 }
