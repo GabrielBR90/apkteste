@@ -27,7 +27,7 @@ body {
     border-bottom: 1px solid black;
     outline: none;
     background: transparent;
-    margin-right: 10px; /* Pequeno espaçamento entre inputs */
+    margin-right: 30px; /* Pequeno espaçamento entre inputs */
     flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
     width: auto;
 }
