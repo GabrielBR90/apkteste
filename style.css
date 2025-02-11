@@ -44,6 +44,23 @@ body {
     width: 100%;
 }
 
+/* Responsividade para telas menores */
+@media screen and (max-width: 600px) {
+    .linha {
+        flex-direction: column; /* Faz os elementos ficarem um abaixo do outro em telas pequenas */
+        align-items: flex-start;
+    }
+
+    .input {
+        width: 100%; /* Faz os campos ocuparem toda a largura no mobile */
+        margin-bottom: 5px; /* Espaçamento extra para melhor organização */
+    }
+
+    .label {
+        margin-bottom: 3px; /* Ajusta o espaçamento dos rótulos no mobile */
+    }
+}
+
 .botao {
     display: block;
     width: 100%;
@@ -64,20 +81,3 @@ body {
     background-color: #0056b3;
 }
 
-
-/* Responsividade para telas menores */
-@media screen and (max-width: 600px) {
-    .linha {
-        flex-direction: column; /* Faz os elementos ficarem um abaixo do outro em telas pequenas */
-        align-items: flex-start;
-    }
-
-    .input {
-        width: 100%; /* Faz os campos ocuparem toda a largura no mobile */
-        margin-bottom: 5px; /* Espaçamento extra para melhor organização */
-    }
-
-    .label {
-        margin-bottom: 3px; /* Ajusta o espaçamento dos rótulos no mobile */
-    }
-}
