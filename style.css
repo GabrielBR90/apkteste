@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 5px; /* Ajuste de espaçamento entre as linhas */
+    margin-bottom: 15px; /* Ajuste de espaçamento entre as linhas */
 }
 
 .label {
@@ -37,7 +37,7 @@ body {
 }
 
 .input-medio {
-    width: 120px;
+    width: 150px;
 }
 
 .input-grande {
