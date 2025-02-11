@@ -5,35 +5,40 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    max-width: 100%;
+    width: 90%;
     margin: auto;
 }
 
+/* Linha sempre manterá os elementos na horizontal */
 .linha {
     display: flex;
-    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+    flex-wrap: wrap; /* Permite que os elementos se ajustem ao espaço disponível */
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 15px; /* Maior espaçamento entre as linhas */
+    justify-content: space-between;
+    gap: 10px; /* Espaço entre os elementos */
+    margin-bottom: 10px;
 }
 
+/* Ajusta o tamanho dos rótulos */
 .label {
     font-weight: bold;
     white-space: nowrap;
-    margin-right: 10px; /* Aproxima os campos dos títulos */
+    min-width: 120px;
 }
 
+/* Campos de entrada responsivos */
 .input {
     border: none;
     border-bottom: 1px solid black;
     outline: none;
     background: transparent;
-    flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
+    flex-grow: 1;
     min-width: 120px;
     max-width: 100%;
-    margin-right: 10px; /* Ajusta espaçamento entre os inputs */
 }
 
+/* Ajuste de tamanhos específicos */
 .input-pequeno {
     width: 80px;
 }
@@ -43,22 +48,24 @@ body {
 }
 
 .input-grande {
-    width: 100%;
+    flex-grow: 2;
 }
 
-/* Responsividade para telas menores */
-@media screen and (max-width: 600px) {
+/* Responsividade melhorada */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
     .linha {
-        flex-direction: column; /* Faz os elementos ficarem um abaixo do outro em telas pequenas */
-        align-items: flex-start;
+        justify-content: space-evenly; /* Mantém os elementos distribuídos igualmente */
     }
 
     .input {
-        width: 100%; /* Faz os campos ocuparem toda a largura no mobile */
-        margin-bottom: 5px; /* Espaçamento extra para melhor organização */
+        min-width: 100px; /* Mantém o tamanho ajustável */
     }
 
     .label {
-        margin-bottom: 3px; /* Ajusta o espaçamento dos rótulos no mobile */
+        min-width: auto; /* Faz os rótulos ocuparem apenas o espaço do texto */
     }
 }
