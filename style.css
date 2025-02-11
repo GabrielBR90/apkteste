@@ -44,22 +44,3 @@ body {
 .input-grande {
     width: 100%;
 }
-
-/* Responsividade melhorada */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    .linha {
-        justify-content: space-evenly; /* Mantém os elementos distribuídos igualmente */
-    }
-
-    .input {
-        min-width: 100px; /* Mantém o tamanho ajustável */
-    }
-
-    .label {
-        min-width: auto; /* Faz os rótulos ocuparem apenas o espaço do texto */
-    }
-}
