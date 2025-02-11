@@ -11,15 +11,18 @@ body {
 
 .linha {
     display: flex;
+    flex-wrap: wrap; /* Garante que os itens se ajustem ao tamanho da tela */
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 15px; /* Ajuste de espaçamento entre as linhas */
+    justify-content: space-between;
+    margin-bottom: 10px; /* Espaçamento maior entre as linhas */
+    width: 100%;
 }
 
 .label {
     font-weight: bold;
     white-space: nowrap;
-    margin-right: 5px; /* Reduz espaço entre título e linha */
+    margin-right: 5px;
+    min-width: 100px; /* Mantém os rótulos alinhados */
 }
 
 .input {
@@ -27,57 +30,27 @@ body {
     border-bottom: 1px solid black;
     outline: none;
     background: transparent;
-    margin-right: 10px; /* Pequeno espaçamento entre inputs */
-    flex-grow: 1; /* Faz os campos ocuparem um espaço proporcional */
-    width: auto;
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: calc(100% - 120px);
+    margin-right: 5px;
 }
 
-.input-pequeno {
-    width: 80px;
-}
-
-.input-medio {
-    width: 150px;
-}
-
-.input-grande {
-    width: 100%;
-}
-
-/* Responsividade para telas menores */
+/* Ajuste específico para manter a mesma aparência no mobile */
 @media screen and (max-width: 600px) {
     .linha {
-        flex-direction: column; /* Faz os elementos ficarem um abaixo do outro em telas pequenas */
-        align-items: flex-start;
-    }
-
-    .input {
-        width: 100%; /* Faz os campos ocuparem toda a largura no mobile */
-        margin-bottom: 5px; /* Espaçamento extra para melhor organização */
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
     }
 
     .label {
-        margin-bottom: 3px; /* Ajusta o espaçamento dos rótulos no mobile */
+        min-width: 100px;
+    }
+
+    .input {
+        width: auto;
+        max-width: 100%;
     }
 }
-
-.botao {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.botao:hover {
-    background-color: #0056b3;
-}
-
